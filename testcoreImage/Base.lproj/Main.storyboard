@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxS-FL-vMg">
+                                <rect key="frame" x="230" y="37" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="5Vg-oM-SBg"/>
+                                    <constraint firstAttribute="height" constant="30" id="Mde-Ln-WAw"/>
+                                </constraints>
+                                <state key="normal" title="照片"/>
+                                <connections>
+                                    <action selector="pickimage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtY-cI-uRk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-cG-w1t">
+                                <rect key="frame" x="200" y="108" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.2676015363" green="0.3731063449" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GkH-iX-TlU"/>
+                                    <constraint firstAttribute="height" constant="100" id="I6X-Uq-qeh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NmT-cG-w1t" firstAttribute="top" secondItem="FxS-FL-vMg" secondAttribute="bottom" constant="41" id="1Ow-fx-92g"/>
+                            <constraint firstItem="FxS-FL-vMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4PE-2b-M15"/>
+                            <constraint firstItem="NmT-cG-w1t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jvf-UD-zgC"/>
+                            <constraint firstItem="FxS-FL-vMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="WHT-82-gSs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tiImageView" destination="NmT-cG-w1t" id="dpv-3a-UhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="196"/>
+        </scene>
+    </scenes>
+</document>
